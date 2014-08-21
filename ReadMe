@@ -19,3 +19,10 @@ The accompanying code book describes the fields in the output in detail.
 
 Assumptions 
 The subset of measures chosen as "mean and standarde deviation measurements" explicitly contain "std" and "-mean" in their names
+
+Operation
+The script loads data (X,Y,Subjects) from train and test folders.The training and test data is combined into one dataframe.
+The column names are updated with feature.txt names.
+Columns with names containing "-mean" or "-std" are extracted and other data not used.
+Activity labels are merged from the activity labels.txt
+Data is summarized (using mean) creating one row per subject/activity/variable combination.
