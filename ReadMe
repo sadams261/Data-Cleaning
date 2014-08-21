@@ -1,0 +1,21 @@
+This script produces a tidy data set per Course Assignment, using input from 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+Configuration requirements:
+The script requires that the zip file be downloaded and decompressed into a directory called /UCI HAR Dataset
+  
+The folder /UCI HAR Dataset needs to exist in the working directory. It will contain two folders, (test and train) along with other files.
+
+Output:
+write.table() is used with row.names=FALSE to create a text file called 'tidy.txt' in the working directory.
+
+Tidy.txt is a "long narrow dataset" Each row of this dataset contains four entries:
+*	Subject
+*	Activity
+*	Variable
+*	Mean of Variable for this combination of Subject and Activity.
+
+The accompanying code book describes the fields in the output in detail.
+
+Assumptions 
+The subset of measures chosen as "mean and standarde deviation measurements" explicitly contain "std" and "-mean" in their names
